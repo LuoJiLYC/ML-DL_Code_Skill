@@ -1,0 +1,113 @@
+{
+    "data": {
+        "split_method": "random",
+        "csv_path": "../data/data_semantic_v2.csv",
+        "test_size": 0.2,
+        "random_seed": 42
+    },
+    "model": {
+        "name": "TabPFNClassifier",
+        "configured_params": {
+            "device": "auto",
+            "random_state": 42
+        },
+        "effective_params": {
+            "auto_scale_n_estimators": true,
+            "average_before_softmax": false,
+            "balance_probabilities": false,
+            "categorical_features_indices": [
+                5,
+                8,
+                9,
+                10,
+                12,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26
+            ],
+            "device": "auto",
+            "differentiable_input": false,
+            "eval_metric": null,
+            "fit_mode": "fit_preprocessors",
+            "ignore_pretraining_limits": false,
+            "inference_config": null,
+            "inference_precision": "auto",
+            "keep_cache_on_device": true,
+            "kv_cache_precision": null,
+            "memory_saving_mode": "auto",
+            "model_path": "auto",
+            "n_estimators": 8,
+            "n_jobs": null,
+            "n_preprocessing_jobs": 1,
+            "random_state": 42,
+            "show_progress_bar": false,
+            "softmax_temperature": 0.9,
+            "tuning_config": null
+        }
+    },
+    "runtime": {
+        "train_time_seconds": 1.1406217236071825,
+        "test_time_seconds": 1.6819338127970695
+    },
+    "output": {
+        "out_dir": "../output/tabpfn"
+    },
+    "metrics": {
+        "accuracy": 0.55,
+        "recall_per_class": [
+            0.0,
+            0.32142857142857145,
+            0.8556701030927835
+        ],
+        "recall_macro": 0.39236622484045164,
+        "recall_weighted": 0.55,
+        "precision_per_class": [
+            0.0,
+            0.5,
+            0.5684931506849316
+        ],
+        "precision_macro": 0.35616438356164387,
+        "precision_weighted": 0.48571917808219184,
+        "f1_per_class": [
+            0.0,
+            0.391304347826087,
+            0.6831275720164609
+        ],
+        "f1_macro": 0.3581439732808493,
+        "f1_weighted": 0.49566469851494005,
+        "prauc_per_class": [
+            0.2693092764703227,
+            0.5083629092721859,
+            0.7019991543992092
+        ],
+        "prauc_macro": 0.49322378004723927,
+        "prauc_weighted": 0.5795663930426151,
+        "confusion_matrix": [
+            [
+                0,
+                13,
+                6
+            ],
+            [
+                0,
+                27,
+                57
+            ],
+            [
+                0,
+                14,
+                83
+            ]
+        ]
+    }
+}

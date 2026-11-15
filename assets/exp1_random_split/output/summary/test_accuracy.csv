@@ -1,0 +1,5 @@
+model,openml_4541_diabetes130us
+CatBoost,0.54
+EAPCR,0.5
+MLP,0.54
+TabPFN,0.55

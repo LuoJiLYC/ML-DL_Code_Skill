@@ -1,0 +1,496 @@
+{
+    "data": {
+        "split_method": "stratified_kfold",
+        "csv_path": "../data/openml_23_cmc.csv",
+        "n_splits": 5,
+        "random_seed": 42,
+        "n_samples": 1425,
+        "n_features": 9,
+        "fold_summary": [
+            {
+                "fold": 1,
+                "train_samples": 1140,
+                "val_samples": 285,
+                "train_class_counts": {
+                    "0": 491,
+                    "1": 253,
+                    "2": 396
+                },
+                "val_class_counts": {
+                    "0": 123,
+                    "1": 63,
+                    "2": 99
+                }
+            },
+            {
+                "fold": 2,
+                "train_samples": 1140,
+                "val_samples": 285,
+                "train_class_counts": {
+                    "0": 491,
+                    "1": 253,
+                    "2": 396
+                },
+                "val_class_counts": {
+                    "0": 123,
+                    "1": 63,
+                    "2": 99
+                }
+            },
+            {
+                "fold": 3,
+                "train_samples": 1140,
+                "val_samples": 285,
+                "train_class_counts": {
+                    "0": 491,
+                    "1": 253,
+                    "2": 396
+                },
+                "val_class_counts": {
+                    "0": 123,
+                    "1": 63,
+                    "2": 99
+                }
+            },
+            {
+                "fold": 4,
+                "train_samples": 1140,
+                "val_samples": 285,
+                "train_class_counts": {
+                    "0": 491,
+                    "1": 253,
+                    "2": 396
+                },
+                "val_class_counts": {
+                    "0": 123,
+                    "1": 63,
+                    "2": 99
+                }
+            },
+            {
+                "fold": 5,
+                "train_samples": 1140,
+                "val_samples": 285,
+                "train_class_counts": {
+                    "0": 492,
+                    "1": 252,
+                    "2": 396
+                },
+                "val_class_counts": {
+                    "0": 122,
+                    "1": 64,
+                    "2": 99
+                }
+            }
+        ]
+    },
+    "model": {
+        "name": "CatBoostClassifier",
+        "configured_params": {
+            "model_params": {
+                "random_seed": 42
+            },
+            "cross_validation": {
+                "method": "StratifiedKFold",
+                "n_splits": 5,
+                "random_seed": 42,
+                "shuffle": true
+            },
+            "save_fold_models": true
+        },
+        "effective_params": [
+            {
+                "nan_mode": "Min",
+                "eval_metric": "MultiClass",
+                "combinations_ctr": [
+                    "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=2:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+                    "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+                ],
+                "iterations": 1000,
+                "sampling_frequency": "PerTree",
+                "fold_permutation_block": 0,
+                "leaf_estimation_method": "Newton",
+                "random_score_type": "NormalWithModelSizeDecrease",
+                "counter_calc_method": "SkipTest",
+                "grow_policy": "SymmetricTree",
+                "penalties_coefficient": 1,
+                "boosting_type": "Plain",
+                "model_shrink_mode": "Constant",
+                "feature_border_type": "GreedyLogSum",
+                "ctr_leaf_count_limit": 18446744073709551615,
+                "bayesian_matrix_reg": 0.10000000149011612,
+                "one_hot_max_size": 2,
+                "eval_fraction": 0,
+                "force_unit_auto_pair_weights": false,
+                "l2_leaf_reg": 3,
+                "random_strength": 1,
+                "rsm": 1,
+                "boost_from_average": false,
+                "max_ctr_complexity": 4,
+                "model_size_reg": 0.5,
+                "simple_ctr": [
+                    "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=2:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+                    "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+                ],
+                "pool_metainfo_options": {
+                    "tags": {}
+                },
+                "use_best_model": false,
+                "class_names": [
+                    0,
+                    1,
+                    2
+                ],
+                "random_seed": 42,
+                "depth": 6,
+                "ctr_target_border_count": 1,
+                "posterior_sampling": false,
+                "has_time": false,
+                "store_all_simple_ctr": false,
+                "border_count": 254,
+                "bagging_temperature": 1,
+                "classes_count": 0,
+                "auto_class_weights": "None",
+                "sparse_features_conflict_fraction": 0,
+                "leaf_estimation_backtracking": "AnyImprovement",
+                "best_model_min_trees": 1,
+                "model_shrink_rate": 0,
+                "min_data_in_leaf": 1,
+                "loss_function": "MultiClass",
+                "learning_rate": 0.07965700328350067,
+                "score_function": "Cosine",
+                "task_type": "CPU",
+                "leaf_estimation_iterations": 1,
+                "bootstrap_type": "Bayesian",
+                "max_leaves": 64,
+                "permutation_count": 4
+            },
+            {
+                "nan_mode": "Min",
+                "eval_metric": "MultiClass",
+                "combinations_ctr": [
+                    "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=2:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+                    "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+                ],
+                "iterations": 1000,
+                "sampling_frequency": "PerTree",
+                "fold_permutation_block": 0,
+                "leaf_estimation_method": "Newton",
+                "random_score_type": "NormalWithModelSizeDecrease",
+                "counter_calc_method": "SkipTest",
+                "grow_policy": "SymmetricTree",
+                "penalties_coefficient": 1,
+                "boosting_type": "Plain",
+                "model_shrink_mode": "Constant",
+                "feature_border_type": "GreedyLogSum",
+                "ctr_leaf_count_limit": 18446744073709551615,
+                "bayesian_matrix_reg": 0.10000000149011612,
+                "one_hot_max_size": 2,
+                "eval_fraction": 0,
+                "force_unit_auto_pair_weights": false,
+                "l2_leaf_reg": 3,
+                "random_strength": 1,
+                "rsm": 1,
+                "boost_from_average": false,
+                "max_ctr_complexity": 4,
+                "model_size_reg": 0.5,
+                "simple_ctr": [
+                    "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=2:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+                    "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+                ],
+                "pool_metainfo_options": {
+                    "tags": {}
+                },
+                "use_best_model": false,
+                "class_names": [
+                    0,
+                    1,
+                    2
+                ],
+                "random_seed": 43,
+                "depth": 6,
+                "ctr_target_border_count": 1,
+                "posterior_sampling": false,
+                "has_time": false,
+                "store_all_simple_ctr": false,
+                "border_count": 254,
+                "bagging_temperature": 1,
+                "classes_count": 0,
+                "auto_class_weights": "None",
+                "sparse_features_conflict_fraction": 0,
+                "leaf_estimation_backtracking": "AnyImprovement",
+                "best_model_min_trees": 1,
+                "model_shrink_rate": 0,
+                "min_data_in_leaf": 1,
+                "loss_function": "MultiClass",
+                "learning_rate": 0.07965700328350067,
+                "score_function": "Cosine",
+                "task_type": "CPU",
+                "leaf_estimation_iterations": 1,
+                "bootstrap_type": "Bayesian",
+                "max_leaves": 64,
+                "permutation_count": 4
+            },
+            {
+                "nan_mode": "Min",
+                "eval_metric": "MultiClass",
+                "combinations_ctr": [
+                    "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=2:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+                    "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+                ],
+                "iterations": 1000,
+                "sampling_frequency": "PerTree",
+                "fold_permutation_block": 0,
+                "leaf_estimation_method": "Newton",
+                "random_score_type": "NormalWithModelSizeDecrease",
+                "counter_calc_method": "SkipTest",
+                "grow_policy": "SymmetricTree",
+                "penalties_coefficient": 1,
+                "boosting_type": "Plain",
+                "model_shrink_mode": "Constant",
+                "feature_border_type": "GreedyLogSum",
+                "ctr_leaf_count_limit": 18446744073709551615,
+                "bayesian_matrix_reg": 0.10000000149011612,
+                "one_hot_max_size": 2,
+                "eval_fraction": 0,
+                "force_unit_auto_pair_weights": false,
+                "l2_leaf_reg": 3,
+                "random_strength": 1,
+                "rsm": 1,
+                "boost_from_average": false,
+                "max_ctr_complexity": 4,
+                "model_size_reg": 0.5,
+                "simple_ctr": [
+                    "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=2:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+                    "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+                ],
+                "pool_metainfo_options": {
+                    "tags": {}
+                },
+                "use_best_model": false,
+                "class_names": [
+                    0,
+                    1,
+                    2
+                ],
+                "random_seed": 44,
+                "depth": 6,
+                "ctr_target_border_count": 1,
+                "posterior_sampling": false,
+                "has_time": false,
+                "store_all_simple_ctr": false,
+                "border_count": 254,
+                "bagging_temperature": 1,
+                "classes_count": 0,
+                "auto_class_weights": "None",
+                "sparse_features_conflict_fraction": 0,
+                "leaf_estimation_backtracking": "AnyImprovement",
+                "best_model_min_trees": 1,
+                "model_shrink_rate": 0,
+                "min_data_in_leaf": 1,
+                "loss_function": "MultiClass",
+                "learning_rate": 0.07965700328350067,
+                "score_function": "Cosine",
+                "task_type": "CPU",
+                "leaf_estimation_iterations": 1,
+                "bootstrap_type": "Bayesian",
+                "max_leaves": 64,
+                "permutation_count": 4
+            },
+            {
+                "nan_mode": "Min",
+                "eval_metric": "MultiClass",
+                "combinations_ctr": [
+                    "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=2:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+                    "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+                ],
+                "iterations": 1000,
+                "sampling_frequency": "PerTree",
+                "fold_permutation_block": 0,
+                "leaf_estimation_method": "Newton",
+                "random_score_type": "NormalWithModelSizeDecrease",
+                "counter_calc_method": "SkipTest",
+                "grow_policy": "SymmetricTree",
+                "penalties_coefficient": 1,
+                "boosting_type": "Plain",
+                "model_shrink_mode": "Constant",
+                "feature_border_type": "GreedyLogSum",
+                "ctr_leaf_count_limit": 18446744073709551615,
+                "bayesian_matrix_reg": 0.10000000149011612,
+                "one_hot_max_size": 2,
+                "eval_fraction": 0,
+                "force_unit_auto_pair_weights": false,
+                "l2_leaf_reg": 3,
+                "random_strength": 1,
+                "rsm": 1,
+                "boost_from_average": false,
+                "max_ctr_complexity": 4,
+                "model_size_reg": 0.5,
+                "simple_ctr": [
+                    "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=2:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+                    "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+                ],
+                "pool_metainfo_options": {
+                    "tags": {}
+                },
+                "use_best_model": false,
+                "class_names": [
+                    0,
+                    1,
+                    2
+                ],
+                "random_seed": 45,
+                "depth": 6,
+                "ctr_target_border_count": 1,
+                "posterior_sampling": false,
+                "has_time": false,
+                "store_all_simple_ctr": false,
+                "border_count": 254,
+                "bagging_temperature": 1,
+                "classes_count": 0,
+                "auto_class_weights": "None",
+                "sparse_features_conflict_fraction": 0,
+                "leaf_estimation_backtracking": "AnyImprovement",
+                "best_model_min_trees": 1,
+                "model_shrink_rate": 0,
+                "min_data_in_leaf": 1,
+                "loss_function": "MultiClass",
+                "learning_rate": 0.07965700328350067,
+                "score_function": "Cosine",
+                "task_type": "CPU",
+                "leaf_estimation_iterations": 1,
+                "bootstrap_type": "Bayesian",
+                "max_leaves": 64,
+                "permutation_count": 4
+            },
+            {
+                "nan_mode": "Min",
+                "eval_metric": "MultiClass",
+                "combinations_ctr": [
+                    "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=2:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+                    "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+                ],
+                "iterations": 1000,
+                "sampling_frequency": "PerTree",
+                "fold_permutation_block": 0,
+                "leaf_estimation_method": "Newton",
+                "random_score_type": "NormalWithModelSizeDecrease",
+                "counter_calc_method": "SkipTest",
+                "grow_policy": "SymmetricTree",
+                "penalties_coefficient": 1,
+                "boosting_type": "Plain",
+                "model_shrink_mode": "Constant",
+                "feature_border_type": "GreedyLogSum",
+                "ctr_leaf_count_limit": 18446744073709551615,
+                "bayesian_matrix_reg": 0.10000000149011612,
+                "one_hot_max_size": 2,
+                "eval_fraction": 0,
+                "force_unit_auto_pair_weights": false,
+                "l2_leaf_reg": 3,
+                "random_strength": 1,
+                "rsm": 1,
+                "boost_from_average": false,
+                "max_ctr_complexity": 4,
+                "model_size_reg": 0.5,
+                "simple_ctr": [
+                    "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=2:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+                    "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+                ],
+                "pool_metainfo_options": {
+                    "tags": {}
+                },
+                "use_best_model": false,
+                "class_names": [
+                    0,
+                    1,
+                    2
+                ],
+                "random_seed": 46,
+                "depth": 6,
+                "ctr_target_border_count": 1,
+                "posterior_sampling": false,
+                "has_time": false,
+                "store_all_simple_ctr": false,
+                "border_count": 254,
+                "bagging_temperature": 1,
+                "classes_count": 0,
+                "auto_class_weights": "None",
+                "sparse_features_conflict_fraction": 0,
+                "leaf_estimation_backtracking": "AnyImprovement",
+                "best_model_min_trees": 1,
+                "model_shrink_rate": 0,
+                "min_data_in_leaf": 1,
+                "loss_function": "MultiClass",
+                "learning_rate": 0.07965700328350067,
+                "score_function": "Cosine",
+                "task_type": "CPU",
+                "leaf_estimation_iterations": 1,
+                "bootstrap_type": "Bayesian",
+                "max_leaves": 64,
+                "permutation_count": 4
+            }
+        ]
+    },
+    "runtime": {
+        "train_time_seconds": 6.496363487909548,
+        "test_time_seconds": 0.01200925000011921
+    },
+    "output": {
+        "out_dir": "../output/catboost_5fold"
+    },
+    "labels": {
+        "classes": [
+            0,
+            1,
+            2
+        ]
+    },
+    "metrics": {
+        "accuracy": 0.5214035087719299,
+        "recall_per_class": [
+            0.6368078175895765,
+            0.31329113924050633,
+            0.5111111111111111
+        ],
+        "recall_macro": 0.4870700226470646,
+        "recall_weighted": 0.5214035087719298,
+        "precision_per_class": [
+            0.6157480314960629,
+            0.4057377049180328,
+            0.4633699633699634
+        ],
+        "precision_macro": 0.49495189992801975,
+        "precision_weighted": 0.5162459915514477,
+        "f1_per_class": [
+            0.6261008807045636,
+            0.3535714285714286,
+            0.4860710854947166
+        ],
+        "f1_macro": 0.48858113159023625,
+        "f1_weighted": 0.5170243505270584,
+        "prauc_per_class": [
+            0.7245930192032437,
+            0.3667364623225873,
+            0.49515340658362594
+        ],
+        "prauc_macro": 0.528827629369819,
+        "prauc_weighted": 0.565536682206052,
+        "confusion_matrix": [
+            [
+                391,
+                61,
+                162
+            ],
+            [
+                86,
+                99,
+                131
+            ],
+            [
+                158,
+                84,
+                253
+            ]
+        ]
+    }
+}

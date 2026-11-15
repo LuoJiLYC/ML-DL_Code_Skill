@@ -1,0 +1,226 @@
+{
+    "data": {
+        "split_method": "stratified_kfold",
+        "csv_path": "../data/openml_23_cmc.csv",
+        "n_splits": 5,
+        "random_seed": 42,
+        "n_samples": 1425,
+        "n_features": 9,
+        "fold_summary": [
+            {
+                "fold": 1,
+                "train_samples": 1140,
+                "val_samples": 285,
+                "train_class_counts": {
+                    "0": 491,
+                    "1": 253,
+                    "2": 396
+                },
+                "val_class_counts": {
+                    "0": 123,
+                    "1": 63,
+                    "2": 99
+                }
+            },
+            {
+                "fold": 2,
+                "train_samples": 1140,
+                "val_samples": 285,
+                "train_class_counts": {
+                    "0": 491,
+                    "1": 253,
+                    "2": 396
+                },
+                "val_class_counts": {
+                    "0": 123,
+                    "1": 63,
+                    "2": 99
+                }
+            },
+            {
+                "fold": 3,
+                "train_samples": 1140,
+                "val_samples": 285,
+                "train_class_counts": {
+                    "0": 491,
+                    "1": 253,
+                    "2": 396
+                },
+                "val_class_counts": {
+                    "0": 123,
+                    "1": 63,
+                    "2": 99
+                }
+            },
+            {
+                "fold": 4,
+                "train_samples": 1140,
+                "val_samples": 285,
+                "train_class_counts": {
+                    "0": 491,
+                    "1": 253,
+                    "2": 396
+                },
+                "val_class_counts": {
+                    "0": 123,
+                    "1": 63,
+                    "2": 99
+                }
+            },
+            {
+                "fold": 5,
+                "train_samples": 1140,
+                "val_samples": 285,
+                "train_class_counts": {
+                    "0": 492,
+                    "1": 252,
+                    "2": 396
+                },
+                "val_class_counts": {
+                    "0": 122,
+                    "1": 64,
+                    "2": 99
+                }
+            }
+        ]
+    },
+    "model": {
+        "name": "MLP",
+        "configured_params": {
+            "model_params": {
+                "hidden_dims": [
+                    128,
+                    64
+                ],
+                "dropout": 0.1
+            },
+            "cross_validation": {
+                "method": "StratifiedKFold",
+                "n_splits": 5,
+                "random_seed": 42,
+                "shuffle": true
+            },
+            "training": {
+                "batch_size": 32,
+                "epochs": 300,
+                "test_interval": 10,
+                "learning_rate": 1e-05,
+                "random_seed_model": 42,
+                "optimizer": "Adam",
+                "criterion": "CrossEntropyLoss",
+                "device": "cuda"
+            },
+            "save_fold_models": true
+        },
+        "effective_params": [
+            {
+                "input_dim": 24,
+                "num_classes": 3,
+                "hidden_dims": [
+                    128,
+                    64
+                ],
+                "dropout": 0.1
+            },
+            {
+                "input_dim": 24,
+                "num_classes": 3,
+                "hidden_dims": [
+                    128,
+                    64
+                ],
+                "dropout": 0.1
+            },
+            {
+                "input_dim": 24,
+                "num_classes": 3,
+                "hidden_dims": [
+                    128,
+                    64
+                ],
+                "dropout": 0.1
+            },
+            {
+                "input_dim": 24,
+                "num_classes": 3,
+                "hidden_dims": [
+                    128,
+                    64
+                ],
+                "dropout": 0.1
+            },
+            {
+                "input_dim": 24,
+                "num_classes": 3,
+                "hidden_dims": [
+                    128,
+                    64
+                ],
+                "dropout": 0.1
+            }
+        ],
+        "structure": "MLP(\n  (model): Sequential(\n    (0): Linear(in_features=24, out_features=128, bias=True)\n    (1): ReLU()\n    (2): Dropout(p=0.1, inplace=False)\n    (3): Linear(in_features=128, out_features=64, bias=True)\n    (4): ReLU()\n    (5): Dropout(p=0.1, inplace=False)\n    (6): Linear(in_features=64, out_features=3, bias=True)\n  )\n)"
+    },
+    "runtime": {
+        "train_time_seconds": 139.29119426058605,
+        "test_time_seconds": 2.4444152167998254
+    },
+    "output": {
+        "out_dir": "../output/mlp_5fold"
+    },
+    "labels": {
+        "classes": [
+            0,
+            1,
+            2
+        ]
+    },
+    "metrics": {
+        "accuracy": 0.5473684210526316,
+        "recall_per_class": [
+            0.7052117263843648,
+            0.33544303797468356,
+            0.4868686868686869
+        ],
+        "recall_macro": 0.5091744837425785,
+        "recall_weighted": 0.5473684210526316,
+        "precision_per_class": [
+            0.6030640668523677,
+            0.4690265486725664,
+            0.501039501039501
+        ],
+        "precision_macro": 0.5243767055214784,
+        "precision_weighted": 0.5379005469771493,
+        "f1_per_class": [
+            0.6501501501501501,
+            0.39114391143911437,
+            0.49385245901639346
+        ],
+        "f1_macro": 0.5117155068685527,
+        "f1_weighted": 0.5384214985403979,
+        "prauc_per_class": [
+            0.7221039956607065,
+            0.4166530370508618,
+            0.5056874088017651
+        ],
+        "prauc_macro": 0.5481481471711112,
+        "prauc_weighted": 0.5791926178249964,
+        "confusion_matrix": [
+            [
+                433,
+                43,
+                138
+            ],
+            [
+                108,
+                106,
+                102
+            ],
+            [
+                177,
+                77,
+                241
+            ]
+        ]
+    }
+}

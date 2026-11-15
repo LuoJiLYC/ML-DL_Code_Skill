@@ -1,0 +1,134 @@
+{
+    "data": {
+        "split_method": "fixed",
+        "train_path": "../data/train_2000.csv",
+        "test_path": "../data/test_2000.csv"
+    },
+    "model": {
+        "name": "CatBoostClassifier",
+        "configured_params": {
+            "random_seed": 42
+        },
+        "effective_params": {
+            "nan_mode": "Min",
+            "eval_metric": "MultiClass",
+            "combinations_ctr": [
+                "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=2:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+                "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+            ],
+            "iterations": 1000,
+            "sampling_frequency": "PerTree",
+            "fold_permutation_block": 0,
+            "leaf_estimation_method": "Newton",
+            "random_score_type": "NormalWithModelSizeDecrease",
+            "counter_calc_method": "SkipTest",
+            "grow_policy": "SymmetricTree",
+            "penalties_coefficient": 1,
+            "boosting_type": "Plain",
+            "model_shrink_mode": "Constant",
+            "feature_border_type": "GreedyLogSum",
+            "ctr_leaf_count_limit": 18446744073709551615,
+            "bayesian_matrix_reg": 0.10000000149011612,
+            "one_hot_max_size": 2,
+            "eval_fraction": 0,
+            "force_unit_auto_pair_weights": false,
+            "l2_leaf_reg": 3,
+            "random_strength": 1,
+            "rsm": 1,
+            "boost_from_average": false,
+            "max_ctr_complexity": 4,
+            "model_size_reg": 0.5,
+            "simple_ctr": [
+                "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=2:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+                "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+            ],
+            "pool_metainfo_options": {
+                "tags": {}
+            },
+            "use_best_model": false,
+            "class_names": [
+                0,
+                1,
+                2
+            ],
+            "random_seed": 42,
+            "depth": 6,
+            "ctr_target_border_count": 1,
+            "posterior_sampling": false,
+            "has_time": false,
+            "store_all_simple_ctr": false,
+            "border_count": 254,
+            "bagging_temperature": 1,
+            "classes_count": 0,
+            "auto_class_weights": "None",
+            "sparse_features_conflict_fraction": 0,
+            "leaf_estimation_backtracking": "AnyImprovement",
+            "best_model_min_trees": 1,
+            "model_shrink_rate": 0,
+            "min_data_in_leaf": 1,
+            "loss_function": "MultiClass",
+            "learning_rate": 0.08197399973869324,
+            "score_function": "Cosine",
+            "task_type": "CPU",
+            "leaf_estimation_iterations": 1,
+            "bootstrap_type": "Bayesian",
+            "max_leaves": 64,
+            "permutation_count": 4
+        }
+    },
+    "runtime": {
+        "train_time_seconds": 14.001851567998528,
+        "test_time_seconds": 0.03257794864475727
+    },
+    "output": {
+        "out_dir": "../output/catboost_train_2000"
+    },
+    "metrics": {
+        "accuracy": 0.5585,
+        "recall_per_class": [
+            0.02242152466367713,
+            0.38912732474964234,
+            0.7792207792207793
+        ],
+        "recall_macro": 0.39692320954469956,
+        "recall_weighted": 0.5585,
+        "precision_per_class": [
+            0.3333333333333333,
+            0.4617996604414261,
+            0.6017191977077364
+        ],
+        "precision_macro": 0.46561739716083195,
+        "precision_weighted": 0.5228922955554149,
+        "f1_per_class": [
+            0.04201680672268908,
+            0.422360248447205,
+            0.6790622473726758
+        ],
+        "f1_macro": 0.38114643418085664,
+        "f1_weighted": 0.5183143321157503,
+        "prauc_per_class": [
+            0.16153310012335376,
+            0.44121201320660797,
+            0.6631758015288061
+        ],
+        "prauc_macro": 0.42197363828625595,
+        "prauc_weighted": 0.5296662963034898,
+        "confusion_matrix": [
+            [
+                5,
+                84,
+                134
+            ],
+            [
+                5,
+                272,
+                422
+            ],
+            [
+                5,
+                233,
+                840
+            ]
+        ]
+    }
+}
