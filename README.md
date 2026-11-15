@@ -28,13 +28,23 @@ AI 写的实验代码能跑，可一出问题，读取数据、预处理和训�
 
 ## 开始使用
 
-把完整文件夹放到 Agent 能读取的位置，告诉它：
+**1. 安装 Skill**
+
+把下面这段话发给 Codex 或 WorkBuddy 等智能体：
 
 ```text
-请读取 ./human_code_skill/SKILL.md，使用这套 Skill，
-对 ./data.csv 训练 CatBoost，最后一列为标签，分层 8:2 划分。
+请从 https://github.com/LuoJiLYC/ML-DL_Code_Skill 下载完整项目，
+并按你当前环境的方式安装这个 Skill。
 ```
 
-把路径换成你自己的，就可以开始。愿你下次改实验，少一点深呼吸。
+**2. 做实验时，告诉 Agent 使用这个 Skill**
+
+```text
+请使用 ML-DL_Code_Skill，
+用 ./data.csv 训练 CatBoost。最后一列是标签，
+训练集和测试集按 8:2 分层划分。
+```
+
+把数据路径、模型和划分方式换成你自己的实验要求即可。
 
 [查看 Skill 说明](SKILL.md) · [查看模型代码](scripts/ml_cls/catboost.py) · [查看五折案例](assets/exp3_5-fold/README.md)
